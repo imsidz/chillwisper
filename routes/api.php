@@ -16,3 +16,13 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('/videos', 'VideoController@getVideos');
+
+Route::get('/channels', 'ChannelController@getChannels');
+
+Route::get('/watch/{videoId}', 'VideoController@getVideo');
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::post('/add-video', 'VideoController@addVideo');
+});

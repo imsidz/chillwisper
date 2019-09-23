@@ -21,7 +21,6 @@ class CreateChannelsTable extends Migration
             $table->string('customurl');
             $table->dateTime('publishedAt');
             $table->string('thumbnail');
-            $table->string('country');
             $table->timestamps();
         });
     }

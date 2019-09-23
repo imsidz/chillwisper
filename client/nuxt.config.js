@@ -28,6 +28,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    { src: '~/plugins/youtube', ssr: true },
   ],
   /*
   ** Nuxt.js dev-modules
@@ -49,6 +50,7 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
+    baseURL: 'http://chillwisper.test.com/api/',
   },
   /*
   ** Build configuration
