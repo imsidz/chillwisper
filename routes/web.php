@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('channel', function(){
+    $video = Youtube::getVideoInfo('rie-hPVJ7Sw');
+    dd($video);
+});
